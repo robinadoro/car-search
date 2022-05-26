@@ -33,7 +33,7 @@ function NavBar(){
       <NavLink to="/about"
       exact
       style={linkStyles}
-      activeStyle={{background:"darkblue",}}
+      // activeStyle={{background:"darkblue",}}
       
       >
         About
@@ -43,7 +43,7 @@ function NavBar(){
       to="/cardetails"
       exact
       style={linkStyles}
-      activeStyle={{backround:"darkblue",}}
+      // activeStyle={{backround:"darkblue",}}
       >
         Search Car
       </NavLink>

@@ -1,16 +1,28 @@
-import React, { Component } from 'react'
+import { async } from '@firebase/util'
+import React, { useState } from 'react'
 import './Login.css'
-export default class Login extends Component {
-  render() {
+
+
+ function Login() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [signInEmail, setSignInEmail] = useState('');
+    const [signInPassword, setSignInPassword] = useState('');
+   
+    const register = async() => {}
+const signin = async() => {}
+const signout = async() => {}
     return (
       <form>
-        <h3>Sign In</h3>
+        <h3>Sign Up</h3>
         <div className="mb-3">
           <label>Email address</label>
           <input
             type="email"
             className="form-control"
             placeholder="Enter email"
+            onChange={(event) => setSignInEmail(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -19,29 +31,17 @@ export default class Login extends Component {
             type="password"
             className="form-control"
             placeholder="Enter password"
+            onChange={(event) => setSignInPassword(event.target.value)}
           />
         </div>
-        <div className="mb-3">
-          <div className="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
-          </div>
-        </div>
+        
         <div className="d-grid">
           <button type="submit" className="btn btn-primary">
-            Submit
+            Signup
           </button>
         </div>
-        <p className="forgot-password text-right">
-          Forgot <a href="#password">password?</a>
-        </p>
+        
       </form>
     )
   }
-}
+  export default Login;  
