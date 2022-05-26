@@ -63,6 +63,14 @@ function NavBar(){
       className="ml-7">
         Login
       </NavLink>
+      <NavLink to="/signup" 
+      exact
+      style={linkStyles}
+      // activeStyle={{background:"darkblue",}}
+      
+      className="ml-7">
+        Signup
+      </NavLink>
       </div>
 
 

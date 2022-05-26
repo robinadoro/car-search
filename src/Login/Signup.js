@@ -1,27 +1,40 @@
-import React, { Component } from 'react'
-export default class SignUp extends Component {
-  render() {
+import React,{useState} from 'react'
+import { async } from '@firebase/util'
+import {auth} from '../components/Firebase/Firebase-config'
+import{createUserWithEmailAndPassword} from 'firebase/auth'
+ function SignUp () {
+
+    const [signUpEmail, setSignUpEmail] = useState('');
+    const [signUpPassword, setSignUpPassword] = useState('');
+    const signup = async() => {
+      try {
+        const response = await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
+        console.log(response)
+      } catch (error) {
+        console.log(error.message);
+      }
+
+    }
+  
     return (
       <form>
-        <h3>Sign Up</h3>
+        <h3>Register</h3>
         <div className="mb-3">
-          <label>First name</label>
+          <label>Enter your names</label>
           <input
             type="text"
             className="form-control"
-            placeholder="First name"
+            placeholder="Enter names"
           />
         </div>
-        <div className="mb-3">
-          <label>Last name</label>
-          <input type="text" className="form-control" placeholder="Last name" />
-        </div>
+        
         <div className="mb-3">
           <label>Email address</label>
           <input
             type="email"
             className="form-control"
             placeholder="Enter email"
+            onChange={(event) => setSignUpEmail(event.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -29,18 +42,17 @@ export default class SignUp extends Component {
           <input
             type="password"
             className="form-control"
-            placeholder="Enter password"
+            placeholder="Enter your password"
+            onChange={(event) => setSignUpPassword(event.target.value)}
           />
         </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" onClick={signup}>
             Sign Up
           </button>
         </div>
-        <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
-        </p>
+        
       </form>
     )
   }
-}
+  export default SignUp;

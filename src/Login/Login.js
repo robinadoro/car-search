@@ -1,21 +1,27 @@
-import { async } from '@firebase/util'
+// import { async } from '@firebase/util'
 import React, { useState } from 'react'
-import './Login.css'
+import {async, signInWithEmailAndPassword } from 'firebase/auth'
+import {auth} from '../components/Firebase/Firebase-config'
+
 
 
  function Login() {
-
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [signInEmail, setSignInEmail] = useState('');
     const [signInPassword, setSignInPassword] = useState('');
    
-    const register = async() => {}
-const signin = async() => {}
-const signout = async() => {}
+    
+const signin = async() => {
+  try {
+    const response = await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
+    console.log(response)
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+// const signout = async() => {}
     return (
       <form>
-        <h3>Sign Up</h3>
+        <h3>Sign In</h3>
         <div className="mb-3">
           <label>Email address</label>
           <input
@@ -36,8 +42,8 @@ const signout = async() => {}
         </div>
         
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Signup
+          <button type="submit" className="btn btn-primary" onClick={signin}>
+            Login
           </button>
         </div>
         

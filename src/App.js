@@ -7,6 +7,7 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
 import { Route,Switch } from 'react-router-dom';
 import Login from './Login/Login';
+import SignUp from './Login/Signup';
 // import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/contactus" ><ContactUs/></Route>  
       <Route path="/login" ><Login/></Route>   
       <Route path="/footer" ><Footer/></Route>
+      <Route path="/signup" ><SignUp/></Route>
       <Route path="/" ><Home/></Route>
 
      
