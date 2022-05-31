@@ -21,7 +21,7 @@ const signin = async() => {
 }
 // const signout = async() => {}
     return (
-      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-blue-200 rounded-md'>       
+      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-neutral-400 rounded-md'>       
         <div className="mb-3">
           <label className=''>Enter your Email address</label>
           <br></br>

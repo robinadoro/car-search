@@ -17,13 +17,13 @@ import{createUserWithEmailAndPassword} from 'firebase/auth'
     }
   
     return (
-      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-blue-200 rounded-md'>
+      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-neutral-400 rounded-md'>
         <div className="mb-3">
           <label>Enter your names</label>
           <br></br>
           <input
             type="text"
-            className=" p-3"
+            className=" rounded-md"
             placeholder="Enter names"
           />
         </div>
@@ -33,7 +33,7 @@ import{createUserWithEmailAndPassword} from 'firebase/auth'
           <br></br>
           <input
             type="email"
-            className="form-control"
+            className="rounded-md"
             placeholder="Enter email"
             onChange={(event) => setSignUpEmail(event.target.value)}
           />
@@ -43,14 +43,14 @@ import{createUserWithEmailAndPassword} from 'firebase/auth'
           <br></br>
           <input
             type="password"
-            className="form-control"
+            className="rounded-md"
             placeholder="Enter your password"
             onChange={(event) => setSignUpPassword(event.target.value)}
           />
         </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary" onClick={signup}>
-            Sign Up
+          <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signup}>
+            Register
           </button>
         </div>
         
