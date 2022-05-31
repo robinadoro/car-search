@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import { Route,Switch } from 'react-router-dom';
 import Login from './Login/Login';
 import SignUp from './Login/Signup';
+import DataFetching from './DataFetching';
 // import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
        
        
     <NavBar /> 
+    {/* <DataFetching/> */}
     <Switch>
       <Route path="/about" ><About/></Route>
       <Route path="/cardetails" ><CarDetails/></Route>
@@ -23,6 +25,7 @@ function App() {
       <Route path="/login" ><Login/></Route>   
       <Route path="/footer" ><Footer/></Route>
       <Route path="/signup" ><SignUp/></Route>
+      <Route path="/datafetching"><DataFetching/></Route>
       <Route path="/" ><Home/></Route>
 
      

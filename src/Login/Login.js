@@ -1,7 +1,8 @@
 // import { async } from '@firebase/util'
 import React, { useState } from 'react'
-import {async, signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import {auth} from '../components/Firebase/Firebase-config'
+import './Login.css'
 
 
 
@@ -20,19 +21,22 @@ const signin = async() => {
 }
 // const signout = async() => {}
     return (
-      <form>
-        <h3>Sign In</h3>
+      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-blue-200 rounded-md'>       
         <div className="mb-3">
-          <label>Email address</label>
+          <label className=''>Enter your Email address</label>
+          <br></br>
           <input
             type="email"
-            className="form-control"
-            placeholder="Enter email"
+            className="form-control p-3"
+            placeholder="email"
             onChange={(event) => setSignInEmail(event.target.value)}
+            
           />
         </div>
         <div className="mb-3">
-          <label>Password</label>
+        
+          <label className='p-4'>Password</label>
+          <br></br>
           <input
             type="password"
             className="form-control"
@@ -41,8 +45,8 @@ const signin = async() => {
           />
         </div>
         
-        <div className="d-grid">
-          <button type="submit" className="btn btn-primary" onClick={signin}>
+        <div className="d-grid ">
+          <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signin}>
             Login
           </button>
         </div>
