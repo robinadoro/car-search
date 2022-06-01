@@ -21,13 +21,13 @@ const signin = async() => {
 }
 // const signout = async() => {}
     return (
-      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-neutral-400 rounded-md'>       
+      <form className='mt-4 ml-48 mr-48 p-2 text-center border-2 bg-neutral-400 '>       
         <div className="mb-3">
           <label className=''>Enter your Email address</label>
           <br></br>
           <input
             type="email"
-            className="form-control p-3"
+            className="form-control rounded-md "
             placeholder="email"
             onChange={(event) => setSignInEmail(event.target.value)}
             
@@ -39,7 +39,7 @@ const signin = async() => {
           <br></br>
           <input
             type="password"
-            className="form-control"
+            className="form-control rounded-md"
             placeholder="Enter password"
             onChange={(event) => setSignInPassword(event.target.value)}
           />

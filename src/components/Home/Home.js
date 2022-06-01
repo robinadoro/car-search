@@ -7,7 +7,7 @@ function Home() {
         <div className=' text-right flex'>
             <div>
             <h3 className='text-3xl mr-12 mt-24 '>Know your Dream Car</h3>
-            <h5 className='text-x ml-10 mr-24'>Get the manufacturer information
+            <h5 className='text-x ml-16 mr-24'>Get the manufacturer information
                  for  your dream car.
             </h5>
 

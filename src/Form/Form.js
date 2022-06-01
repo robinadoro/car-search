@@ -32,8 +32,8 @@ function Form() {
     }
    
     // props.sendFormDataSomewhere(formData);
-    // setFirstName ("");
-    // setLastName("");
+    setFirstName ("");
+    setLastName("");
   }
 
   const listOfSubmissions=submittedData.map((data, index)=>{

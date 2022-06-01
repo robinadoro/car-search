@@ -27,25 +27,25 @@ function CarDetails() {
       }
   };
   
-  fetch('https://cars-specs-automotive-catalog.p.rapidapi.com/api/engine/282d8feb-2132-4e73-861b-e442c7295f9d', options)
-      .then(response => response.json())
+  // fetch('https://cars-specs-automotive-catalog.p.rapidapi.com/api/engine/282d8feb-2132-4e73-861b-e442c7295f9d', options)
+  //     .then(response => response.json())
 
-      .then(response => {
-          // console.log(response);
-          setPosts(response);
-      }
+  //     .then(response => {
+  //         // console.log(response);
+  //         setPosts(response);
+      // }
           // console.log(response)
           // setPosts(response)
-      
-        )
-      .catch(err => console.error(err));
+      // 
+        // )
+      // .catch(err => console.error(err));
 
   },[idFromButtonClick]);
 
 // console.log('ghsd',posts);
   const carInfo = (event)=>{
     event.preventDefault();
-    // console.log(  event.target.value)
+    console.log(  event.target.value)
 
   }
 
