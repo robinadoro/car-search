@@ -4,9 +4,9 @@ import Form from '../../Form/Form';
 
 function ContactUs() {
   return (
-    <div className='flex bg-neutral-400'>
+    <div className='flex bg-neutral-400 '>
         <div className=''>
-            <h1 className='text-2xl pl-9'>Contact us</h1>
+            <h1 className='text-center text-2xl p-8 '>Contact us</h1>
             <img src={Contact} alt=""contact/>
 
 

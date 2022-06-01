@@ -49,19 +49,27 @@ function Form() {
 
   return (
    <div>
-      <form className='flex-col' onSubmit={handleSubmit}>
-        <p><label>First Name</label></p>
-      <input type="text" onChange={handleFirstNameChange} value={firstName} />
-      <p><label>Second Name</label></p>
-      <input type="text" onChange={handleLastNameChange} value={lastName} />
-      <p><label>Your email</label></p>
-      <input type='email' placeholder='Enter Email'></input>
-      <p><label>Message</label></p>
-      <textarea placeholder='Enter Your Message Here'></textarea>
+      <form className='flex-col p-4 mt-20' onSubmit={handleSubmit}>
+        <label className='mb-8'>First Name</label>
+        <br></br>
+      <input type="text" required className='rounded-md mb-4' placeholder='Your First Name' onChange={handleFirstNameChange} value={firstName} />
+      <br></br>
+      <label>Second Name</label>
+      <br></br>
+      <input type="text" required className='rounded-md mb-4' placeholder='Your Second Name' onChange={handleLastNameChange} value={lastName} />
+      <br></br>
+     
+      <label>Your email</label>
+      <br></br>
+      <input type='email' required className='rounded-md mb-4' placeholder='Enter Email'></input>
+      <br></br>
+      <label>Message</label>
+      <br></br>
+      <textarea className="rounded-md mb-4" placeholder='Type Your Message Here'></textarea>
       <br></br>
       
 
-      <button type="submit">Submit</button>
+      <button type="submit" className='bg-red-600 text-white rounded-md p-2'>Submit</button>
     </form>
 
     {/* conditionally render error messages */}
@@ -70,7 +78,7 @@ function Form() {
       errors.length>0
       ?errors.map((error, index)=>(<p key={index} style={{color:"red"}}>{error}</p>)):null
     }
-    <h3>Thank you  {firstName}for your Message</h3>
+    <h3>Thank you  {firstName}  for your Message</h3>
     {listOfSubmissions}
 
    </div>

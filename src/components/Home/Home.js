@@ -3,7 +3,7 @@ import Benz from "../../assets/benz.png"
 
 function Home() {
   return (
-    <div className='home bg-neutral-400 h-screen '>
+    <div className='home bg-neutral-400'>
         <div className=' text-right flex'>
             <div>
             <h3 className='text-3xl mr-12 mt-24 '>Know your Dream Car</h3>

@@ -42,10 +42,10 @@ function CarDetails() {
 
   },[idFromButtonClick]);
 
-console.log('ghsd',posts);
+// console.log('ghsd',posts);
   const carInfo = (event)=>{
     event.preventDefault();
-    console.log(  event.target.value)
+    // console.log(  event.target.value)
 
   }
 
