@@ -50,6 +50,9 @@ const signin = async() => {
             Login
           </button>
         </div>
+        <h4>User Loged in:</h4>
+
+        <button>Sign Out</button>
         
       </form>
     )
