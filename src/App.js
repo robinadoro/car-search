@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import { Route,Switch } from 'react-router-dom';
 import Login from './Login/Login';
 import SignUp from './Login/Signup';
-import DataFetching from './DataFetching';
+// import {Container} from 'react-bootstrap';
 // import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
       <Route path="/login" ><Login/></Route>   
       <Route path="/footer" ><Footer/></Route>
       <Route path="/signup" ><SignUp/></Route>
-      <Route path="/datafetching"><DataFetching/></Route>
       <Route path="/" ><Home/></Route>
 
      
