@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import {auth} from '../components/Firebase/Firebase-config'
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,12 +47,16 @@ const signin = async() => {
         </div>
         
         <div className="d-grid ">
-          <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signin}>
+          <Link to="/cardetails">
+            <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signin}>
             Login
-          </button>
+            </button>
+
+          </Link>
+          
         </div>
         <h4>User Loged in:</h4>
-        {auth.currentUser.email}
+        {/* {auth.currentUser.email} */}
 
         <button className="bg-red-600 text-white rounded-md p-2">Sign Out</button>
         

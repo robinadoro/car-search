@@ -67,7 +67,6 @@ function NavBar(){
 
 
       <NavLink to="/login" 
-      exact
       style={linkStyles}
       // activeStyle={{background:"darkblue",}}
       
