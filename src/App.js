@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import { Route,Switch } from 'react-router-dom';
 import Login from './Login/Login';
 import SignUp from './Login/Signup';
+import User from './components/Users/User';
 // import {Container} from 'react-bootstrap';
 // import { BrowserRouter } from 'react-router-dom';
 
@@ -25,6 +26,8 @@ function App() {
       <Route path="/login" ><Login/></Route>   
       <Route path="/footer" ><Footer/></Route>
       <Route path="/signup" ><SignUp/></Route>
+      <Route path="/user"><User/></Route>
+      
       <Route path="/" ><Home/></Route>
 
      

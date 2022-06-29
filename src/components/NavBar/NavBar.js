@@ -55,6 +55,17 @@ function NavBar(){
       >
         Contact Us
       </NavLink>
+
+      <NavLink 
+      to="/user"
+      exact
+      style={linkStyles}
+      // activeStyle={{backround:"darkblue",}}
+      >
+        User
+      </NavLink>
+
+
       <NavLink to="/login" 
       exact
       style={linkStyles}
