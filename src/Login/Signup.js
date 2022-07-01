@@ -3,6 +3,7 @@ import React,{useState, useRef} from 'react'
 import {auth} from '../components/Firebase/Firebase-config'
 import{createUserWithEmailAndPassword} from 'firebase/auth'
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
  function SignUp () {
 
 
@@ -70,9 +71,13 @@ import { Container } from 'react-bootstrap';
           />
         </div>
         <div className="d-grid">
-          <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signup}>
+        <Link to="/user">
+        <button type="submit" className="bg-red-600 text-white rounded-md p-2" onClick={signup}>
             Register
           </button>
+
+        </Link>
+          
         </div>
 
         <h4>Already have an account? Log In</h4>
