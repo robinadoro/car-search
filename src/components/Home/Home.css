@@ -10,9 +10,15 @@
     margin: 4px 2px;
     cursor: pointer;
 } */
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
 .card{
     margin-top: -60px;
 }
 .home{
     height: 100vh;
+  font-family: 'Poppins', sans-serif;
+
 }

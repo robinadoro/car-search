@@ -36,9 +36,11 @@ function Home() {
 
         <Card  className="p-2" >
           <Card.Img variant="top" src={Models} alt='models' className="h-28 w-28 rounded-2xl " />
-          <Card.Body className='p-1 '>            
-            <button  className='rounded-lg bg-red-500 p-2'>Get Models</button>
-            
+          <Card.Body className='p-1 '>  
+            <Link to="/user">
+
+              <button  className='rounded-lg bg-red-500 p-2'>Get Models</button>
+            </Link> 
           </Card.Body>
         </Card>
       </Container>

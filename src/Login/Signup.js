@@ -31,16 +31,7 @@ import { Container } from 'react-bootstrap';
         border-2 bg-neutral-400
         rounded-md'
         style={{maxWidth:'400vh'}}>
-        <div className="mb-3">
-          <label>Enter your names</label>
-          <br></br>
-          <input
-            type="text"
-            required
-            className=" rounded-md"
-            placeholder="Enter names"
-          />
-        </div>
+        
         
         <div className="mb-3">
           <label>Email address</label>

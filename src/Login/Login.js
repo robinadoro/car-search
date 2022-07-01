@@ -55,10 +55,9 @@ const signin = async() => {
           </Link>
           
         </div>
+        
         <h4>User Loged in:</h4>
-        {/* {auth.currentUser.email} */}
 
-        <button className="bg-red-600 text-white rounded-md p-2">Sign Out</button>
         
       </form>
     )

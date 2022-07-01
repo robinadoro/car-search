@@ -2,14 +2,8 @@ import Carsearch from "../../assets/carsearch.png"
 import React,{useState, useEffect} from 'react'
 
 
-
-   
-
-
-
-
-
 function CarDetails() {
+  
 
   const [posts, setPosts] = useState([]);
   const [id, setId] = useState('');

@@ -2,6 +2,8 @@
 import React from 'react'
 // import { Container } from 'react-bootstrap'
 import Select from 'react-select'
+import firebaseConfig from '../Firebase/Firebase-config'
+import { Link } from 'react-router-dom'
 
 function User () {
 
@@ -21,8 +23,8 @@ function User () {
 
     ]
   return (
-    
-      <div className='flex border-2 border-rose-600  ' >
+    <div>
+      <div className='flex   ' >
         <div className=' mt-10  text-center
          bg-neutral-100
     mr-4 ml-36 h-64 align-self  '>
@@ -30,8 +32,8 @@ function User () {
                 <label>name of brand</label>
                 <Select options={options} className="w-60 text-center ml-8"/>
                 <label>Name of Car</label> <br></br>
-                <input type="text" />
-                <button className='rounded-lg bg-red-500 p-2'>Create Model</button>
+                <input type="text" /> <br></br>
+                <button className='rounded-lg bg-red-500 p-2 mt-8'>Create Brand</button>
 
             </form>            
         </div>
@@ -42,13 +44,28 @@ function User () {
                 <label>name of model</label> <br></br>
                 <input type="text" /> <br></br>
                 <label>Description</label> <br></br>
-                <input type="text" /> 
-                <button className='rounded-lg bg-red-500 p-2'>Create Brands</button>
+                <input type="text" /> <br></br>
+                <button className='rounded-lg bg-red-500 p-2 mt-8'>Create Brands</button>
 
             </form>            
-        </div>       
+        </div> 
+              
       
     </div>
+    <div className='text-center pt-8'>
+
+    <Link to="/">
+    <button onClick={() => firebaseConfig.auth().signOut()} 
+    className="bg-red-600 text-white rounded-md p-2 " >Sign out</button>
+
+    </Link>
+    
+
+    </div>
+    </div>
+    
+
+    
   )
 
 }
